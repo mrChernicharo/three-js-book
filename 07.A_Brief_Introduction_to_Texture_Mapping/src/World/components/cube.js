@@ -11,9 +11,7 @@ function createMaterial() {
   const textureLoader = new TextureLoader();
 
   // load a texture
-  const texture = textureLoader.load(
-    '/assets/textures/uv-test-bw.png',
-  );
+  const texture = textureLoader.load('/assets/textures/uv-test-bw.png');
 
   // create a "standard" material using
   // the texture we just loaded as a color map
@@ -33,7 +31,7 @@ function createCube() {
 
   const radiansPerSecond = MathUtils.degToRad(30);
 
-  cube.tick = (delta) => {
+  cube.tick = delta => {
     // increase the cube's rotation each frame
     cube.rotation.z += delta * radiansPerSecond;
     cube.rotation.x += delta * radiansPerSecond;
